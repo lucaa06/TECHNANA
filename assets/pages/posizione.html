@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TECHNANA | Sede e Logistica</title>
+  <link rel="stylesheet" href="../CSS/posizioneCSS.css">
+  <link rel="shortcut icon" href="../favicon/BANANA.png" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+        <a href="../../index.html">
+      <img src="../img/BANANA.png" width="70px"></a>
+    </div>
+    <nav>
+      <ul class="nav-links" style="color: yellow;font-weight: bolder;">
+        <li>Luca Cutrono</li>
+        <li>Kenny Boatini</li>
+        <li>Andrea Bellini</li>
+        <li>Mario Gardella</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>TECHNANA SEDE</h1>
+    <p>Una posizione strategica per un'azienda di eccellenza.</p>
+  </section>
+
+  <main class="main">
+    <section class="about">
+      <h2>La nostra Sede</h2>
+      <p>
+        La sede principale di TECHNANA si trova negli Emirati Arabi, ad Abu Dhabi, scelta per le eccezionali agevolazioni fiscali (solo <strong>1% di tasse</strong>).
+        La produzione dei pezzi è realizzata attraverso collaborazioni con fornitori esterni selezionati per garantire qualità e innovazione.
+      </p>
+    </section>
+
+    <section class="logistica">
+      <h2>Logistica e Magazzino</h2>
+      <p>
+        TECHNANA possiede un magazzino di grandi dimensioni (<strong>943m²</strong>) a Katowice, Polonia, organizzato tramite il software gestionale ABB.
+        Questo spazio supporta la distribuzione di prodotti standard e personalizzati per soddisfare ogni esigenza del cliente.
+      </p>
+    </section>
+
+    <section class="fabbriche">
+      <h2>Fabbriche e Produzione</h2>
+      <p>
+        L'assemblaggio dei prodotti avviene in tre fabbriche dislocate a livello globale:
+      </p>
+      <ul>
+        <li><strong>Texas, Stati Uniti</strong></li>
+        <li><strong>Vietnam, Sud-Est Asiatico</strong></li>
+        <li><strong>Polonia, Europa Orientale</strong></li>
+      </ul>
+      <p>
+        Ogni fabbrica utilizza tecnologie avanzate come saldature di precisione, bracci robotici automatizzati e robot per lo spostamento dei pacchi.
+      </p>
+    </section>
+
+    <section class="sostenibilita">
+      <h2>Sostenibilità</h2>
+      <p>
+        TECHNANA è impegnata nella riduzione delle emissioni di CO2 e degli sprechi, utilizzando pannelli solari di ultima generazione mantenuti efficienti grazie a dispositivi di pulizia avanzati. Questo approccio garantisce un utilizzo ottimale delle risorse e contribuisce a un futuro più sostenibile.
+      </p>
+    </section>
+
+    <section class="punti-interesse">
+      <h2>Punti di Interesse</h2>
+      <ul>
+        <li><strong>Sede principale:</strong> Emirati Arabi, Abu Dhabi</li>
+        <li><strong>Produzione materie prime:</strong></li>
+        <ul>
+          <li>TSMC, Hsinchu, Taiwan – Circuiti elettronici</li>
+          <li>Stratasys, Minneapolis, USA – Oggetti 3D</li>
+          <li>BOE Technology, Pechino, Cina – Schermi</li>
+        </ul>
+        <li><strong>Magazzino principale:</strong> Katowice, Polonia</li>
+        <li><strong>Fabbriche:</strong> Texas (USA), Vietnam, Polonia</li>
+      </ul>
+    </section>
+    <section class="punti-interesse">
+      <h2>Punti di Interesse</h2>
+      <p>Seleziona una posizione dal menu e premi "Mostra Mappa" per visualizzarla.</p>
+      <select id="select-location">
+        <option value="" disabled selected>Seleziona una posizione...</option>
+        <option value="24.453884,54.3773438">Sede principale - Abu Dhabi, Emirati Arabi</option>
+        <option value="50.2599,19.0216">Magazzino - Katowice, Polonia</option>
+        <option value="31.9686,-99.9018">Fabbrica - Texas, Stati Uniti</option>
+        <option value="21.0285,105.8542">Fabbrica - Vietnam</option>
+        <option value="52.2297,21.0122">Fabbrica - Polonia</option>
+        <option value="24.8138,121.0176">Produzione - TSMC, Hsinchu, Taiwan</option>
+        <option value="44.9778,-93.2650">Produzione - Stratasys, Minneapolis, USA</option>
+        <option value="39.9042,116.4074">Produzione - BOE Technology, Pechino, Cina</option>
+      </select>
+      <button id="create-map-button">Mostra Mappa</button>
+    </section>
+    
+    <div id="map-container"></div>
+    
+      
+     
+      
+    
+  </main>
+  <script>
+    document.getElementById('create-map-button').addEventListener('click', function() {
+      const coordinates = document.getElementById('select-location').value;
+      const mapContainer = document.getElementById('map-container');
+  
+      if (!coordinates) {
+        alert('Seleziona una posizione prima di visualizzare la mappa.');
+        return;
+      }
+  
+      // Creazione dinamica dell'iframe
+      mapContainer.innerHTML = `
+        <iframe 
+          src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${coordinates}" 
+          width="100%" 
+          height="500" 
+          style="border:0; margin-top: 20px;" 
+          allowfullscreen="" 
+          loading="lazy"></iframe>`;
+    });
+  </script>
+  
+  
+  <footer class="footer">
+    <p>© 2024 TECHNANA. All rights reserved. | Powered by 🍌 Innovation</p>
+  </footer>
+</body>
+</html>

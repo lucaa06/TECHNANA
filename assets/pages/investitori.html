@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investi in TECHNANA</title>
+    <link rel="stylesheet" href="../CSS/investiCss.css">
+    <link rel="shortcut icon" href="../favicon/BANANA.png" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../../index.html">
+            <img src="../img/BANANA.png" alt="" width="50px" ></a>
+        </div>
+        <nav>
+            <ul class="nav-links" style="color: yellow;font-weight: bolder;">
+                <li>Luca Cutrono</li>
+                <li>Kenny Boatini</li>
+                <li>Andrea Bellini</li>
+                <li>Mario Gardella</li>
+              </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1 style="font-size: 8em;">Investi in Innovazione,<br><span class="highlight">Scegli TECHNANA</span></h1>
+            <p style="font-size: 1.7em;">La tecnologia incontra la qualità: un'opportunità unica per gli investitori visionari.</p>
+        </section>
+
+        <section id="about" class="section">
+            <h2>Chi siamo</h2>
+            <p>TECHNANA è un'azienda leader nel settore tecnologico, riconosciuta per l'innovazione e l'affidabilità. Con un fatturato netto annuo di <strong>2.4 milioni di euro</strong>, siamo pronti a crescere insieme a voi.</p>
+        </section>
+
+        <section id="plan" class="section">
+            <h2>Piano di Investimento</h2>
+            <p>Offriamo una partecipazione del <strong>3%</strong> sul fatturato netto per gli investitori che desiderano essere parte della nostra rivoluzione tecnologica.</p>
+            <div class="plan-highlight">
+                <h3>Il tuo investimento in numeri:</h3>
+                <ul>
+                    <li>Fatturato netto annuale: <strong>2.4M €</strong></li>
+                    <li>Ritorno stimato (3%): <strong>72,000 €</strong></li>
+                    <li>Crescita prevista: <strong>+15% annuo</strong></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contattaci</h2>
+            <p>Se vuoi saperne di più, non esitare a contattarci.</p>
+            <button class="cta-button" onclick="banana()">Scopri di più</button>
+        </section>
+    </main>
+
+   
+    <script>
+        function banana(){
+            alert("questo contenuto non è presente perchè non avevo voglia di fare un sito enorme");
+        }
+        const bars = document.querySelectorAll('.bar');
+
+bars.forEach((bar, index) => {
+  const initialHeight = 100; 
+  const growthRate = 0.15;
+  const growthPeriods = index; 
+
+  const finalHeight = initialHeight * Math.pow(1 + growthRate, growthPeriods);
+  bar.style.height = finalHeight + '%';
+});
+
+    </script>
+    <div class="chart-container">
+        <h2>Crescita Aziendale (Ogni 4 Anni)</h2><br><br><br><br><br><br>
+        <div class="chart">
+          <div class="bar" data-year="2024" style="height: 100%;"></div>
+          <div class="bar" data-year="2028" style="height: 115%;"></div>
+          <div class="bar" data-year="2032" style="height: 132.25%;"></div>
+          <div class="bar" data-year="2036" style="height: 152.09%;"></div>
+        </div>
+      </div>
+       <footer class="footer">
+        <p>© 2024 TECHNANA. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
