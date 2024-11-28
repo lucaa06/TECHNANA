@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #f5f5f5;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    margin: 5px 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffeb3b;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #ffeb3b;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f9d923;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #ffeb3b;
+  }
+  
+  .hero h1 {
+    font-size: 9em;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    font-weight: lighter;
+  }
+  
+  .main {
+    padding: 50px 20px;
+  }
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    color: #ffeb3b;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #dcdcdc;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid #333;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 12px;
+  }
+  
+  th {
+    background-color: #000;
+    color: #ffeb3b;
+  }
+  
+  td {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #222;
+  }
+  
+  /* Anteprima Preventivi */
+  .anteprima-preventivi ul {
+    list-style-type: disc;
+    margin: 10px 20px;
+  }
+  
+  .anteprima-preventivi li {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #f5f5f5;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #ffeb3b;
+    font-size: 0.9em;
+  }
+  .hero p{
+    text-transform: uppercase;
+  }
